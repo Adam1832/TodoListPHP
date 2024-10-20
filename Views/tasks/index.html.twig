@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <a href="/add">Ajouter une tâche</a>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task.description }}
+                {% if not task.completed %}
+                    <a href="/complete/{{ task.id }}">Marquer comme terminée</a>
+                {% endif %}
+                <a href="/delete/{{ task.id }}">Supprimer</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
