@@ -1,6 +1,16 @@
 {
-    "name": "adam/todo-list",
+    "name": "adam/TodoListPHP",
+    "description": "Todolist.",
     "require": {
-        "twig/twig": "^3.14"
-    }
+        "php": ">=7.2.5",
+        "twig/twig": "^3.14",
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "license": "proprietary", 
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
